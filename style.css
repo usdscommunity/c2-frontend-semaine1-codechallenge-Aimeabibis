@@ -1,28 +1,22 @@
 *{
     margin: 0;
-    padding: 0;
-    
+    padding: 0;    
 }
 
 body {
-    height: 98vh; 
+    height: 100%; 
     background-color: hsl(257, 40%, 49%);
     background-image: url("./images/bg-desktop.svg");
     background-repeat: no-repeat;
-    padding: 30px 30px;
+    padding: 30px 50px;
     font-family: Open Sans, sans-serif;
-    border: ;
+   
 }
-/* img {
-    padding-bottom: 10px;
-} */
 
 .container {
     width: 100%;    
     display: flex;
-    justify-content: space-between;
     padding-top: 30px;
-    border: red 1px solid;
 }
 
 .left {
@@ -33,50 +27,101 @@ body {
 }
 .right {
     width: 40%; 
-    padding: 90px 30px ;
-    
+    padding-top: 30px ; 
     
 }
 .right h1 {
     color: white;
-    font-size: 1.5rem; 
+    font-size: 2rem; 
     margin-bottom: 20px; 
+    margin-top: 25px;
+    line-height: 1.5;
     
 }
 .right p {
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
+    line-height: 1.5;
     
 }
 .right button {
     
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    padding: 12px;
+    width: 200px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.right button:hover {    
     background-color: hsl(300, 69%, 71%);
     color: white;
-    padding: 12px 40px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 40px ;
-    transition: 0.3s ease-in-out;
+    box-shadow: black 0 0 10px;
+    transform: scale(1.05);
 }
 
 footer {
     width: 100%;
     display: flex;
-    justify-content: right;
-
-    border: red 1px solid;
+    justify-content: right;    
 }
 
 i {
     display: flex;
-
     justify-content: right;
     color: white;
     padding: 5px;
     border: white 1px solid;
     border-radius: 50%;
     cursor: pointer;
+}
+
+i:hover{
+    color:hsl(300, 69%, 71%) ;    
+}
+
+@media(max-width: 768px) {
+    header img {
+        width: 150px;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .left, .right {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .right {
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    .right h1 {
+        font-size: 1.5rem;
+    }
+    
+    .right p {
+        font-size: 1rem;
+    }
+    
+    .right button {        
+        padding: 10px;
+    }
+    footer {
+        justify-content: center;
+        padding: 20px 0;
+    }
 }
